@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -84,13 +81,17 @@ public class CustomerController {
 //        return mav;
 //    }
 
+    // @RequestMapping은 클라이언트의 요청 URL을 어떤 메서드가 처리할지를 맵핑하는 어노테이션
+    // /customer_myPage라는 URL로 요청오면 myPage 메서드 실행
+    // ModelAndView: Spring에서 데이터와 뷰를 동시에 설정할 수 있는 객체(즉, 컨트롤러에서 데이터를 설정하고 어떤 뷰(jsp)를 사용해서 응답할지 정할 수 있음
+
     @RequestMapping("/customer_myPage")
     public ModelAndView myPage(HttpSession session) {
         String id = (String) session.getAttribute("id");
         CustomerDTO customerInfo = customerService.selectIdOfCustomer(id);
 
         ModelAndView mav = new ModelAndView();
-        mav.addObject("customer",customerInfo);
+        mav.addObject("customer", customerInfo);
         mav.setViewName("customer/customer_myPage");
         return mav;
     }
@@ -108,6 +109,26 @@ public class CustomerController {
 
     }
 
-}
+    // 고객 정보 수정 ajax 요청 처리
+    @PostMapping("/updateCustomer")
+    @ResponseBody
+    public String updateCustomer(@RequestBody CustomerDTO customer) {
+        try {
+            System.out.println("Received customerId: " + customer.getCustomerId());
+            CustomerDTO updateCustomer = customerService.selectIdOfCustomer(customer.getCustomerId());
+            updateCustomer.setPassword(customer.getPassword());
+            updateCustomer.setName(customer.getName());
+            updateCustomer.setPhoneNumber(customer.getPhoneNumber());
+            updateCustomer.setEmail(customer.getEmail());
+            updateCustomer.setAddress(customer.getAddress());
 
+            customerService.updateCustomer(updateCustomer);
+            return "고객 정보 수정 성공";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "고객 정보 수정 실패";
+        }
+    }
+
+}
 

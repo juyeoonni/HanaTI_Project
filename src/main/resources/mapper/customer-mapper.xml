@@ -21,11 +21,19 @@
         and password = #{password}
     </select>
 
-    <!-- 회원정보 불러오기 -->
+    <!-- 고객 정보 불러오기 (id) -->
     <select id="selectIdOfCustomer" parameterType="String" resultType="com.spring.SpringbootRecord.customer.model.DTO.CustomerDTO">
         SELECT *
         FROM customer_hana
         where customerId = #{id}
     </select>
+
+    <!-- 고객 정보 수정 -->
+    <update id="updateCustomer" parameterType="com.spring.SpringbootRecord.customer.model.DTO.CustomerDTO">
+        UPDATE customer_hana
+        SET password = #{password}, name = #{name}, phoneNumber = #{phoneNumber}, email = #{email}, address = #{address}
+        WHERE customerId = #{customerId}
+    </update>
+
 </mapper>
 

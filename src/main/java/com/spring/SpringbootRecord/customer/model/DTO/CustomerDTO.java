@@ -1,7 +1,5 @@
 package com.spring.SpringbootRecord.customer.model.DTO;
 
-import java.util.Date;
-
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +16,8 @@ public class CustomerDTO {
     private String phoneNumber;
     private String email;
     private String address;
-    private Date joinDate;
+    private String joinDate;
+
 
     // 기본생성자
     public CustomerDTO() {

@@ -14,5 +14,7 @@ public interface CustomerDAO {
     public CustomerDTO login(HashMap<String, String> loginData);
 
     public CustomerDTO selectIdOfCustomer(String id);
+
+    void updateCustomer(CustomerDTO customer);
 }
 
