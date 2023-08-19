@@ -11,7 +11,6 @@
         FROM customer_hana
     </select>
 
-
     <!-- 로그인 -->
     <select id="login" parameterType="HashMap" resultType="com.spring.SpringbootRecord.customer.model.DTO.CustomerDTO">
         SELECT

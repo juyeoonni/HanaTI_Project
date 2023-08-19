@@ -40,8 +40,9 @@
             <!-- nav바 버튼 -->
             <ul class="nav">
                 <li><a href="/home" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="/card/selectCard" class="nav-link px-2 link-secondary">마이카드</a></li>
                 <li><a href="/customer/selectAllCustomer" class="nav-link px-2">조회</a></li>
-                <li><a href="#" class="nav-link px-2">라이프</a></li>
+                <li><a href="/shop/shopMain" class="nav-link px-2">라이프</a></li>
 
                 <% if (name != null) { %>
                 <li><a href="/customer/customer_myPage" class="nav-link px-2">마이하나</a></li>
