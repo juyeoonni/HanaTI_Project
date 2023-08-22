@@ -1,33 +1,103 @@
+
+
+.flex-card-container {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    background-color: #C8D5DD;
+    height: 400px;
+    width: 1800px;
+}
+
+.mainOnePay {
+    background-color: #C8D5DD;
+    height: 400px;
+    width: 950px;
+    padding-top: 80px;
+}
+
+.mainText {
+    font-size: 70px;
+    color: 00857E;
+    margin-left: 220px;
+}
+
+.subText {
+    font-size: 25px;
+    color: 00857E;
+    margin-left: 220px;
+}
+
+.mainCardImage{
+    width: 500px;
+    height: 350px;
+    margin-top: 40px;
+}
+
+.flex-card-container2 {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    background-color: #00857E;
+    height: 600px;
+    width: 1800px;
+}
+
+.mainOnePay2 {
+    background-color: #00857E;
+    height: 600px;
+    width: 950px;
+    padding-top: 150px;
+}
+
+.mainText2 {
+    font-size: 80px;
+    color: white;
+    margin-left: 200px;
+}
+
+.subText2 {
+    font-size: 30px;
+    color: white;
+    margin-left: 200px;
+}
+
+.mainCardImage2 {
+    width: 680px;
+    height: 530px;
+    margin-top: 50px;
+}
+
 .menu-bar {
     background-color: #BCD9D3;
-    height: 150px;
-    width: 1800px;
+    height: 100px;
+    width: 1100px;
     margin: 50px auto 0;
     display: flex;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 .menu-item {
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
-    margin: 0 150px;
+    margin: 0 90px;
 }
 
 .menu-content {
-    padding: 8px 16px;
+    padding: 5px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 30px;
+    font-size: 15px;
     color: #776B6B;
     text-align: center;
+    width:100px
 }
 
 .menu-item img {
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 5px;
     margin-top: 5px;
 }
@@ -40,3 +110,4 @@
 .menu-item:hover .menu-content {
     color: #fff;
 }
+

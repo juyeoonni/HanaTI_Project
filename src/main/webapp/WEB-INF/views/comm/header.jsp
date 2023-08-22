@@ -33,14 +33,14 @@
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <div class="col-md-3 mb-2 mb-md-0">
-                <img src="/img/hanaLogo.png">
+                <img class="hanaLogo" src="/img/hanaLogo.png">
                 <span class="hana-logo-text">하나원페이</span>
             </div>
 
             <!-- nav바 버튼 -->
             <ul class="nav">
                 <li><a href="/home" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="/card/selectCard" class="nav-link px-2 link-secondary">마이카드</a></li>
+                <li><a href="/card/selectCardList" class="nav-link px-2 link-secondary">마이카드</a></li>
                 <li><a href="/customer/selectAllCustomer" class="nav-link px-2">조회</a></li>
                 <li><a href="/shop/shopMain" class="nav-link px-2">라이프</a></li>
 

@@ -141,11 +141,11 @@
             </div>
 
             <!-- 보유카드명 -->
-            <div class="myCardNameDetail">Young Hana+ 체크카드</div>
+            <div class="myCardNameDetail">${card.cardName}</div>
 
             <!-- 보유카드 이미지  -->
             <div class="myCard">
-                <img src="/img/youngHanaCard.png">
+                <img src="/img/${card.cardImg}">
             </div>
         </div>
 
@@ -153,17 +153,17 @@
          <div class="cardInfo">
             <!-- 카드번호 -->
             <div class="cardNumber card-detail">
-            카드번호: 9440-8111-7875-4566
+            카드번호: ${card.cardNumber}
              </div>
 
              <!-- 유효기간 -->
             <div class="cardValidate card-detail">
-                유효기간: 01/27
+                유효기간: ${card.validityPeriod}
              </div>
 
              <!-- 카드발급일 -->
             <div class="cardJoinDate card-detail">
-                카드발급일: 2023-03-28
+                카드발급일: ${card.cardNumber}
             </div>
 
             <!-- 거래내역조회 -->

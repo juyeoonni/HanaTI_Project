@@ -1,4 +1,15 @@
 package com.spring.SpringbootRecord.card.model.DAO;
 
-public class CardDAO {
+import com.spring.SpringbootRecord.card.model.DTO.CardDTO;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
+@Mapper
+public interface CardDAO {
+
+    public List<CardDTO> selectCardList();
+
+    public CardDTO selectCardDetailByCardNumber(@Param("cardNumber")String cardNumber);
 }

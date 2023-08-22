@@ -123,7 +123,7 @@
   font-size: 28px;
    font-weight: bold; /* 폰트를 굵게 설정 */
    position: absolute; /* 위치를 절대적으로 설정 */
-   bottom: -10px;      /* 하단에서 10px 위에 위치하게 설정 */
+   bottom: -30px;      /* 하단에서 10px 위에 위치하게 설정 */
    left: 40%;         /* 부모 요소의 가운데에 위치하게 설정 */
    transform: translateX(-40%); /* 정확하게 중앙에 오도록 조정 */
 }
