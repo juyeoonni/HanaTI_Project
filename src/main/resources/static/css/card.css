@@ -146,8 +146,71 @@
 <!-- 여기서부터 카드 디테일 페이지 -->
 
 
+/* 아코디언의 너비를 조절하고 간격을 늘립니다 */
+.accordion {
+    margin-left: 500px !important; /* 사이드바와 간격 조절 */
+}
 
+.main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;  /* viewport height를 이용하여 화면의 높이를 채웁니다. */
+        background-color: #f6f6f6; /* 배경색 */
+        padding: 20px;
+    }
 
+    .OnePayCardCompany {
 
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;  /* 둥근 모서리 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 그림자 효과 */
+        width: 100%;
+        max-width: 1000px;  /* 최대 가로 너비 */
+    }
+
+.dropdown {
+    margin-left: 50px;
+
+}
+
+.btn btn-secondary dropdown-toggle {
+    background-color: #00857E !important;
+}
+
+.onepayCardImg{
+}
+
+.onepayCardInfo {
+    margin-left: 50px;
+}
+
+.onepayCardCheckbox{
+    margin-left: 50px !important;
+}
+
+.centered-button {
+    background-color: #BCD9D3;
+    display: flex;
+        flex-direction: column; /* 세로 방향으로 항목들을 정렬합니다. */
+        align-items: center; /* 중앙 정렬을 위한 스타일 */
+}
+
+.card-item {
+    display: flex;     /* 수평으로 배열 */
+    align-items: center;  /* 중앙 정렬 */
+    margin-bottom: 20px;  /* 카드 아이템 간의 간격 */
+}
+.cardBank{
+    margin-right: 20px;
+}
+
+.card-image {
+    width: 300px;      /* 이미지의 너비 */
+    height: 180px;      /* 이미지의 높이 */
+    object-fit: cover;  /* 이미지의 비율 유지 */
+    margin-right: 20px;  /* 이미지와 텍스트 정보 간의 간격 */
+}
 
 

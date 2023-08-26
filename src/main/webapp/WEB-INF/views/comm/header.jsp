@@ -45,7 +45,7 @@
                 <li><a href="/shop/shopMain" class="nav-link px-2">라이프</a></li>
 
                 <% if (name != null) { %>
-                <li><a href="/customer/customer_myPage" class="nav-link px-2">마이하나</a></li>
+                <li><a href="/customer/customer_myHana" class="nav-link px-2">마이하나</a></li>
                 <% } %>
 
                 <li><a href="#" class="nav-link px-2">About</a></li>

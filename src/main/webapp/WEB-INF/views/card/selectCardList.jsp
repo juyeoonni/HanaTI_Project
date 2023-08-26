@@ -34,6 +34,13 @@
                     <svg class="icon" width="16" height="16"></svg>
                     다른금융 조회
                 </button>
+                <a href="/card/joinHanaOnePay">
+                               <button class="card-button" id="card2">
+                               <a href="/card/joinHanaOnePay">
+                                                                  <svg class="icon" width="16" height="16"></svg>
+                                                                  하나원페이등록
+                                                                   </a>
+                                                              </button>
             </div>
             <hr>
         </div>

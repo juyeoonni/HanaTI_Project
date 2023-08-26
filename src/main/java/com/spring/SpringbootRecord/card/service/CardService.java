@@ -18,7 +18,14 @@ public class CardService {
         return  cardDAO.selectCardList();
     }
 
+    public List<CardDTO> selectCardByBankCode(List<String> modifiedBankCodes) {
+        return cardDAO.selectCardByBankCode(modifiedBankCodes);
+    }
+
+
+
     public CardDTO selectCardDetailByCardNumber(String cardNumber) {
         return  cardDAO.selectCardDetailByCardNumber(cardNumber);
     }
+
 }

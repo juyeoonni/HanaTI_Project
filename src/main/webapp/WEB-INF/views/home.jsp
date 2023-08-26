@@ -70,16 +70,85 @@
 
 <!-- 메뉴바 -->
 <div class="menu-bar">
-    <a href="#" class="menu-item">
-        <div class="menu-content">
-            <img src="/img/menu1.png" alt="하나머니조회">
-            하나머니조회
+
+    <!-- Trigger element -->
+    <a data-href="/card/selectFinance" class="menu-item">
+                                          <div class="menu-content">
+            <img src="/img/menu1.png" alt="하나원페이">
+            하나원페이
         </div>
     </a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">하나원페이</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Your modal content here -->
+              <h3>마이데이터 수집, 이용, 제공 동의서</h3>
+                <hr>
+
+                <h5><strong>1. 서비스 목적</strong></h5>
+                <p>
+                    마이데이터 서비스는 사용자의 개인정보를 효과적으로 관리하며, 사용자의 명시적 동의하에 해당 정보를 제3자에게 제공하는 서비스입니다. 이를 통해 사용자에게 맞춤형 서비스 제공이 가능합니다.
+                </p>
+
+                <h5><strong>2. 수집하는 데이터 정보</strong></h5>
+                <ul>
+                    <li>기본 정보: 이름, 주민등록번호, 전화번호, 이메일</li>
+                    <li>서비스 이용 정보: 로그인 기록, 서비스 이용 기록</li>
+                    <li>기타 추가 정보: 선호하는 상품, 이용한 서비스 내역 등</li>
+                </ul>
+
+                <h5><strong>3. 데이터 제3자 제공</strong></h5>
+                <p>
+                    사용자의 명시적인 동의 하에만, 위에서 수집한 데이터는 제3자와 공유됩니다. 공유하는 목적은 주로 사용자에게 더 나은 서비스 제공과 관련됩니다.
+                </p>
+
+                <h5><strong>4. 동의 철회와 데이터 삭제</strong></h5>
+                <p>
+                    사용자는 언제든지 동의 철회를 원할 경우, 마이페이지에서 해당 기능을 선택하실 수 있습니다. 동의 철회 시, 모든 개인 데이터는 즉시 삭제되며, 복구가 불가능합니다.
+                </p>
+
+                <h5><strong>5. 데이터 보관 기간 및 정책</strong></h5>
+                <p>
+                    사용자의 데이터는 동의 후 최대 3년간 보관됩니다. 보관 기간 이후에는 자동으로 파기되며, 별도의 안내 없이 파기될 수 있습니다.
+                </p>
+
+                <h5><strong>6. 동의 거부 및 제한</strong></h5>
+                <p>
+                    사용자는 본 동의서에 대해 동의 거부 권리가 있으며, 동의하지 않을 경우 마이데이터 서비스의 일부 또는 전체 이용에 제한이 있을 수 있습니다.
+                </p>
+
+                <small class="text-muted">본 동의서는 <span class="text-primary">하나카드</span>의 서비스 정책에 따라 변경될 수 있습니다.</small>
+
+          </div>
+          <div class="modal-footer">
+          <a href="/home">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+          </a>
+            <button type="button" class="btn btn-primary confirm-go">동의</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
     <a href="#" class="menu-item">
         <div class="menu-content">
-            <img src="/img/menu2.png" alt="계좌조회">
-            계좌조회
+            <img src="/img/menu2.png" alt="하나머니조회">
+            하나머니조회
         </div>
     </a>
     <a href="#" class="menu-item">
@@ -107,15 +176,25 @@
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <img src="/img/footer.png">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<!-- 기존 코드... -->
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    var modalTriggerElement = document.querySelector('.menu-item');
+    var myModal = new bootstrap.Modal(document.getElementById('confirmModal'), {
+        keyboard: false
+    });
+
+    modalTriggerElement.addEventListener('click', function() {
+        myModal.show();
+    });
+
+    document.querySelector('.confirm-go').addEventListener('click', function() {
+        window.location.href = modalTriggerElement.getAttribute('data-href');
+    });
+});
 
 </script>
-</body>
-</html>
-
-
 </body>
 </html>

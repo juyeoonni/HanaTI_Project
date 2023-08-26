@@ -5,10 +5,13 @@ import com.spring.SpringbootRecord.card.service.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class CardController {
@@ -52,6 +55,44 @@ public class CardController {
         return "card/selectCardDetail";
     }
 
+    @GetMapping("/card/joinHanaOnePay")
+    public String joinHanaOnePay() {
+        return "card/joinHanaOnePay";
+    }
+    @PostMapping("/card/joinHanaOnePay")
+    public String joinHanaOnePay(@RequestParam List<String> selectedBankCodes, HttpServletRequest request) {
+        System.out.println("controller 시작");
+
+        // 첫 두 글자만 가져와서 새로운 리스트 생성
+        List<String> modifiedBankCodes = selectedBankCodes.stream()
+                .map(code -> code.substring(0, 2))
+                .distinct() // 중복 제거
+                .collect(Collectors.toList());
+
+        List<CardDTO> matchedCards = cardService.selectCardByBankCode(modifiedBankCodes);
+
+        request.setAttribute("selectedBankCodes", modifiedBankCodes);
+        request.setAttribute("matchedCards", matchedCards);
+
+        for(String bankCode : modifiedBankCodes){
+            System.out.println("은행코드 값: " + bankCode);
+        }
+
+        return "card/joinHanaOnePay";
+    }
+
+
+
+
+    @GetMapping("/card/joinHanaOnePayOk")
+    public String joinHanaOnePayOk() {
+        return  "card/joinHanaOnePayOk";
+    }
+
+    @GetMapping("/card/selectFinance")
+    public String selectFinance() {
+        return "card/selectFinance";
+    }
 }
 
 

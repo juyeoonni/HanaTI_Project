@@ -112,6 +112,13 @@
                 <svg class="icon" width="16" height="16"></svg>
                 다른금융 조회
               </button>
+               <a href="/card/joinHanaOnePay">
+               <button class="card-button" id="card2">
+                                                  <svg class="icon" width="16" height="16"></svg>
+                                                  하나원페이등록
+
+                                              </button>
+</a>
             </div>
 
             <hr>
@@ -172,9 +179,11 @@
             </div>
 
             <!-- 하나원페이 등록 -->
+            <a href="/card/joinHanaOnePay">
             <div class="cardHistory card-detail-center">
                 하나원페이 등록
             </div>
+            </a>
 
     </div>
 

@@ -10,12 +10,22 @@
         SELECT *
         FROM card
     </select>
-    
-    <!-- 카드번호(cardNumber)로 카드상세정보 조회 -->
-    <select id="selectCardDetailByCardNumber" resultType="com.spring.SpringbootRecord.card.model.DTO.CardDTO">
+
+    <select id="selectCardByBankCode" resultType="com.spring.SpringbootRecord.card.model.DTO.CardDTO">
         SELECT *
-        FROM CARD
-        WHERE cardNumber = #{cardNumber}
+        FROM card
+        WHERE 1=0
+        <foreach item="modifiedBankCodes" collection="list">
+            OR bankCode LIKE #{modifiedBankCodes} || '%'
+        </foreach>
     </select>
-    
+
+
+
+    <select id="selectCardByBankCode2" resultType="com.spring.SpringbootRecord.card.model.DTO.CardDTO">
+        SELECT *
+        FROM card
+        WHERE bankCode = #{bankCode}
+    </select>
+
 </mapper>

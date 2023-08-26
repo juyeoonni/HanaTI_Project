@@ -55,6 +55,11 @@ public class CustomerController {
         return "customer/customer_join";
     }
 
+    @GetMapping("/customer_myHana")
+    public String customer_myHana() {
+        return "customer/customer_myHana";
+    }
+
     @PostMapping("/login-logic")
     public ResponseEntity<String> loginLogic(@RequestBody HashMap<String, String> loginData, HttpServletRequest request) {
         CustomerDTO loginMember = customerService.login(loginData);

@@ -69,6 +69,10 @@ body {
         <a href="/customer/customer_update">회원정보수정</a>
 </div>
 
+<div>
+    <a href="/card/joinHanaOnePay">하나페이등록</a>
+</div>
+
 <!-- 푸터위치 -->
 <%@ include file="/WEB-INF/views/comm/footer.jsp"%>
 
