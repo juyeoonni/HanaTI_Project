@@ -73,7 +73,7 @@
 
     <!-- Trigger element -->
     <a data-href="/card/selectFinance" class="menu-item">
-                                          <div class="menu-content">
+        <div class="menu-content">
             <img src="/img/menu1.png" alt="하나원페이">
             하나원페이
         </div>
@@ -139,12 +139,6 @@
       </div>
     </div>
 
-
-
-
-
-
-
     <a href="#" class="menu-item">
         <div class="menu-content">
             <img src="/img/menu2.png" alt="하나머니조회">
@@ -164,6 +158,41 @@
         </div>
     </a>
 </div>
+
+<!-- 혜택 디브-->
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-content">
+            <h4>Card 1</h4>
+            <p>Card content goes here.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h4>Card 2</h4>
+            <p>Card content goes here.</p>
+        </div>
+    </div>
+</div>
+<div class="card-container">
+    <div class="card">
+        <div class="card-content">
+            <h4>Card 3</h4>
+            <p>Card content goes here.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h4>Card 4</h4>
+            <p>Card content goes here.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
 
