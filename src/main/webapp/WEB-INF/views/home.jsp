@@ -159,38 +159,35 @@
     </a>
 </div>
 
-<!-- 혜택 디브-->
-
+<!-- 혜택 디브
 <div class="card-container">
     <div class="card">
-        <div class="card-content">
-            <h4>Card 1</h4>
-            <p>Card content goes here.</p>
+        <div class="card-content-detail">
+            <div class="card-text">Content 1</div>
+            <img class="card-image" src="path-to-image1.jpg" alt="Image 1">
         </div>
     </div>
     <div class="card">
-        <div class="card-content">
-            <h4>Card 2</h4>
-            <p>Card content goes here.</p>
-        </div>
-    </div>
-</div>
-<div class="card-container">
-    <div class="card">
-        <div class="card-content">
-            <h4>Card 3</h4>
-            <p>Card content goes here.</p>
+        <div class="card-content-detail">
+            <div class="card-text">Content 2</div>
+            <img class="card-image" src="path-to-image2.jpg" alt="Image 2">
         </div>
     </div>
     <div class="card">
-        <div class="card-content">
-            <h4>Card 4</h4>
-            <p>Card content goes here.</p>
+        <div class="card-content-detail">
+            <div class="card-text">Content 3</div>
+            <img class="card-image" src="path-to-image3.jpg" alt="Image 3">
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content-detail">
+            <div class="card-text">Content 4</div>
+            <img class="card-image" src="path-to-image4.jpg" alt="Image 4">
         </div>
     </div>
 </div>
 
-
+-->
 
 
 

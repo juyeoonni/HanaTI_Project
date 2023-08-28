@@ -116,35 +116,31 @@
 
 .card-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* 균등한 간격으로 카드 사이에 공간을 만들기 위해 추가했습니다. */
 }
 
 .card {
-    width: 300px;
-    height: 200px;
-    background-color: #E8E8E8;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 15px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 300px; /* 가로 크기 지정 */
+    height: 200px; /* 세로 크기 지정 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
 }
 
-.card-content {
-    text-align: center;
+.card-content-detail {
+    display: flex;
+    align-items: center;
 }
 
-.card h4 {
-    margin: 0;
-    padding: 5px 0;
-    font-size: 18px;
-    color: #333;
+.card-text {
+    margin-right: 20px;
 }
 
-.card p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
+.card-image {
+    width: 50px;
+    height: 50px;
 }
-
